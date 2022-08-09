@@ -1,0 +1,12 @@
+<h3>Welcome!</h3>
+
+<form method="post" action="/on_submit_button">
+    <select name="select_guild" method="GET" action="/">
+        <option name="{{guilds[0][0]}}" value="{{guilds[0][1]}}" selected>{{guilds[0][0]}}</option>
+        {% for guild in guilds[1:] %}
+        <option name="{{guild[0]}}" value="{{guild[1]}}">{{guild[0]}}</option>
+        {% endfor %}
+    </select>
+    <p>Role name <input name="input_role" type="text"/></p>
+    <button name="button_submit" type="submit">Submit</button>
+</form>
